@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
+using UnityEditor;
 using UnityEngine;
 
 public class BattleScript : MonoBehaviour
@@ -35,7 +37,7 @@ public class BattleScript : MonoBehaviour
         {
             VictoryState();
             AddXp (10);
-            enemyScript.enemyHealth = Random.Range(20, 30);
+            Destroy(gameObject);
 
 
         }
@@ -50,7 +52,7 @@ public class BattleScript : MonoBehaviour
     {
         //The value of experience is added to the Player xp Total.
         playerScript.playerXp += experience;
-        Debug.Log("Thats a lot of xp Challenger, Have a look" + playerScript.playerXp);
+        Debug.Log("Thats a lot of xp Challenger, Have a look " + playerScript.playerXp);
     }
 
 }
