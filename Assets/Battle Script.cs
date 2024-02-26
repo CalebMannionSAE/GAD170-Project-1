@@ -37,7 +37,7 @@ public class BattleScript : MonoBehaviour
         {
             VictoryState();
             AddXp (10);
-            Destroy(gameObject);
+            
 
 
         }

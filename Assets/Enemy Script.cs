@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
+    
     public int enemyHealth;
     public int enemyAttack;
 
@@ -19,6 +20,9 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (enemyHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
